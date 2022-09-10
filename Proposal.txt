@@ -1,0 +1,66 @@
+Proposal
+2x2x2 Rubik cube solver
+	- Chandan Ahire
+
+I learned solving Rubiks cube and got intressted in speed cubing aswell since class 8. Also I was into Arduino since last year so eventually I ended up with an idea of making own rubiks cube solver. Like many people searching for "Rubik's Cube Solver" on Google, one of the first robots I found was the Tilted Twister design by Hans Andersson made with lego which has a simple design which can be implemented easily using basic knowledge of auduino.
+
+Aim :-
+As a begineer, I started with a simple algorithm of 2x2 rubik cube. My aim is to successfully solve a 2x2x2 rubik cube using a robotic arm. 
+
+Materials Used :-
+2x2 Rubik Cube
+
+Electronics:
+ - Arduino UNO R3
+ - 2 servos (I used MG995s)
+ - wires
+ - USB cable
+
+Hardware:
+ - popsicle sticks
+ - screws
+ - thin plywood
+ - cardboard wheel
+ - hot glue
+
+Software :-
+ - Arduino IDE - (Algorithm in C++)
+
+Concept :-
+After researching, and discussing with seniors I found out the simplest approach to solve a rubik cube is using mathematical path. God's Number shows the smallest number of moves needed to solve the Rubik's Cube from any random starting position and it is 14 quater turns or 11 half turns for 2x2x2 Rubik's Cube.
+Reduction to the graph problem:
+We treat every possible combination of our Rubik cube as a node in the graph and an undirected edge exist between 2 nodes if we can reach one node from another node by applying only single operation from the set of 6 operations(quater turns)(F,Fi,L,Li,U,Ui).
+So, now our problem is reduced to find the shortest path from the start position (or node) to the final position. Since there are no weights on an edge we can find the shortest path using Breadth First Search(BFS).
+Using Serial communication to send moves to Arduino and arduino code performing respective moves physically.
+
+Electronics :-
+Two servos are used
+Push Servo(PIN 6)- This servo is responsible for two machanical moves, one to push rubik cube and one to hold rubik cube when rotate servo rotates it.
+Rotate Servo(PIN 9)- This is responsible for rotating cube.
+
+Mechanical Design :-
+The mechanism(Idea of Hans Anderson) has basically two parts :- 
+i) A platform holds and rotates the cube - This platform is connected with Rotate servo.
+ii) The arm pushes and holds the cube - This arm is made using Push servo.
+This push and rotation will eventually solve the cube.
+
+Budget :-
+Arduino UNO R3 and USB cabel- 600 ruppees
+Servos(mg995s)- 400*2=800 ruppees
+Wooden Sticks, Cardboard and Glue- 200 ruppees
+2x2 Rubik cube- 350 ruppees
+Total- 1950 ruppees.
+
+Possible Changes :-
+ - Reading intial stage using sensors.
+ - Coding in more efficient language.
+
+Future Plans :-
+ - To work on complex algorithms of 3x3x3 Rubiks cube,
+ - To make solving more fast,
+ - Using mordern techniques of machine learning and artificial intelligence,
+ - Using mordern coding language,
+ - Making it more efficient in every possible way.
+
+Project Status :- 
+In Progress
